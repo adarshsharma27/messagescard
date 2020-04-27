@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Bai+Jamjuree" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Message Card</title>
+    <style>
+        *{
+    padding: 0px;
+    margin: 0;
+    box-sizing: border-box;
+ 
+  }
+  body{
+    width:100%;
+    height:100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #fbfafd;
+   
+  }
+ .container{
+     width:300px;
+     height:325px;
+     background-color: #ffffff;
+     border:1px solid #f9f9f9;
+     border-radius: 10px;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-evenly;
+     align-content: center;
+     text-align: center;
+     box-shadow: 0px 0px 25px rgba(0,0,0,0.1);
+     transform: rotate(-15deg);
+     z-index:1;
+     cursor: pointer;
+    
+ }
+section{
+    
+    position: absolute;
+    border-radius: 10px;
+    width:300px;
+    height:325px;
+    background-color: #2ecc71;
+    transform: rotate(15deg);
+    z-index: -1;
+    opacity: 0.4;
+    
+}
+ main{
+       
+    position: absolute;
+    border-radius: 10px;
+    width:300px;
+    height:325px;
+    background-color: #e74c3c;
+    transform: rotate(15deg);
+    z-index: -1;
+    opacity: 0.4;
+ }
+ h2{
+     font-weight: 600;
+     font-size: 2.5rem;
+     color:#ffff;
+     font-family:'Bai Jamjuree',sans-serif;
+     
+     
+ }
+ .fa{
+    font-size: 7.5rem;
+   transform: rotate(-12deg);
+ }
+ .fa-smile-o{
+    color:#2ecc71 ;
+ }
+ .fa-frown-o{
+     color:#e74c3c;
+ }
+ .container:hover main{
+     transition: all 0.3s ease;
+    transform: rotate(0deg);
+    
+ }
+ 
+ .container:hover section{
+     transition: all 0.3s ease;
+    transform: rotate(0deg);
+ }
+ .container:hover .fa{
+    transition: all 0.1s ease;
+    transition-delay: 0.1s;
+     transform: rotate(0deg);
+  }
+ .container:hover{
+    transition: all 0.5s ease;
+    transform: rotate(0deg);
+    transition-delay: 0.5s;
+    
+ }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <section></section>
+      <h2>Excellent</h2>
+       <i class="fa fa-smile-o fa-5x" aria-hidden="true"></i>
+     
+    
+    </div>
+    <div class="container">
+           <main></main>
+            <h2>Bummer</h2>
+          <i class="fa fa-frown-o fa-5x"  aria-hidden="true" ></i>          
+          
+          </div>
+</body>
+</html>
